@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: black;
+  background-color: #181818;
 }
 
 main {
@@ -21,7 +21,10 @@ form {
   align-items: center;
   border: 5px solid white;
 }
-
+#new-palette{
+  background-color: #333;
+  border: 1px solid white
+}
 button {
   background-color: #6b6b6b;
   margin: 10px 0;
@@ -37,4 +40,21 @@ button {
 
 #temp {
   border: 0;
+}
+
+#palettes{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.option{
+  width: 100%;
+  display: flex;
+}
+
+.copyButton{
+  background-color: #6b6b6b;
+  margin: auto;
+  padding: 10px;
 }
