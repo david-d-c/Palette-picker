@@ -58,3 +58,42 @@ button {
   margin: auto;
   padding: 10px;
 }
+
+.exampleBackground{
+  width: 60%;
+}
+
+.whiteBox{
+  background-color: white;
+  height: 30px;
+  margin-bottom: -10px;
+}
+
+.blackBox{
+  background-color: black;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.newColor{
+  display: inline;
+  padding: 10px;
+}
+
+.newColor span {
+  color: black;
+}
+
+.newPalette{
+  width: 25%;
+  text-align: center;
+  border: 1px solid white;
+  background-color: #333;
+  margin: 2.5%;
+}
+
+.paletteTemp{
+  margin: auto;
+  padding: 10px
+}
+
