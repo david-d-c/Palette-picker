@@ -74,8 +74,10 @@ const createPalette = (colors, title, temp) => {
   newPalette.append(paletteTitle, option1, option2, option3, deleteButton, paletteTemp)
   document.getElementById('palettes').append(newPalette)
 }
-
-
+//load default palettes
+palettes.forEach(({ title, colors, temperature }) => {
+  createPalette(colors, title, temperature)
+});
 
 
 
