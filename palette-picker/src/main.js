@@ -14,6 +14,7 @@ const createColorOption = (color) => {
   const copyButton = document.createElement('button')
   copyButton.textContent = `Copy ${color}`
   copyButton.className = 'copyButton'
+  copyButton.dataset.colorCode = color
 
   const exampleBackground = document.createElement('div')
   exampleBackground.className = 'exampleBackground'
