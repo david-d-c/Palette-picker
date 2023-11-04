@@ -55,8 +55,9 @@ button {
 
 .copyButton{
   background-color: #6b6b6b;
+  width: 30%;
   margin: auto;
-  padding: 10px;
+  padding: 5px;
 }
 
 .exampleBackground{

@@ -12,7 +12,7 @@ const createColorOption = (color) => {
   option.className = 'option'
 
   const copyButton = document.createElement('button')
-  copyButton.textContent = `Copy ${color}`
+  copyButton.innerHTML = `Copy <br>${color}`
   copyButton.className = 'copyButton'
   copyButton.dataset.colorCode = color
 
@@ -84,9 +84,24 @@ palettes.forEach(({ title, colors, temperature }) => {
 document.querySelector('form').addEventListener('submit', e => {
   e.preventDefault()
   const formData = new FormData(e.target)
-  const { title, color1, color2, color3, temp } = Object.fromEntries(formData);
-
+  const newPaletteObj = Object.fromEntries(formData);
+  const { title, color1, color2, color3, temp } = newPaletteObj;
+  console.log(newPaletteObj)
   createPalette([color1, color2, color3],title, temp)
 
   document.querySelector('form').reset()
 })
+
+document.querySelectorAll('.copyButton').forEach(item => {
+  item.addEventListener('click', async event => {
+    if (!navigator.clipboard) {
+      // Clipboard API is not available
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(event.target.dataset.colorCode);
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
+  });
+});
