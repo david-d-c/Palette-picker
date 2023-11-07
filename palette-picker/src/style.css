@@ -1,6 +1,5 @@
 * {
   color: #ffffff;
-  /* border: 5px solid white; */
 }
 
 html {
@@ -21,10 +20,12 @@ form {
   align-items: center;
   border: 5px solid white;
 }
-#new-palette{
+
+#new-palette {
   background-color: #333;
   border: 1px solid white
 }
+
 button {
   background-color: #6b6b6b;
   margin: 10px 0;
@@ -42,42 +43,42 @@ button {
   border: 0;
 }
 
-#palettes{
+#palettes {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.option{
+.option {
   width: 100%;
   display: flex;
 }
 
-.copyButton{
+.copyButton {
   background-color: #6b6b6b;
   width: 30%;
   margin: auto;
   padding: 5px;
 }
 
-.exampleBackground{
+.exampleBackground {
   margin: auto;
   width: 50%;
 }
 
-.whiteBox{
+.whiteBox {
   background-color: white;
   height: 30px;
   margin-bottom: -10px;
 }
 
-.blackBox{
+.blackBox {
   background-color: black;
   height: 30px;
   margin-top: -10px;
 }
 
-.newColor{
+.newColor {
   display: inline;
   padding: 10px;
 }
@@ -86,7 +87,7 @@ button {
   color: black;
 }
 
-.newPalette{
+.newPalette {
   width: 28%;
   text-align: center;
   border: 1px solid white;
@@ -94,8 +95,7 @@ button {
   margin: 2.5%;
 }
 
-.paletteTemp{
+.paletteTemp {
   margin: auto;
   padding: 10px
 }
-
