@@ -38,6 +38,22 @@ const createColorOption = (color) => {
   copyButton.className = 'copyButton'
   copyButton.dataset.colorCode = color
 
+  copyButton.addEventListener('click', async event => {
+        if (!navigator.clipboard) {
+          // Clipboard API is not available
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(event.target.dataset.colorCode);
+          event.target.innerHTML = `Copied <br>Hex!`
+          setTimeout(() => {
+            event.target.innerHTML = `Copy <br>${color}`
+          }, 1000)
+        } catch (err) {
+          console.error('Failed to copy!', err);
+        }
+      });
+
   const exampleBackground = document.createElement('div')
   exampleBackground.className = 'exampleBackground'
 
@@ -122,17 +138,3 @@ document.querySelector('form').addEventListener('submit', e => {
 
   document.querySelector('form').reset()
 })
-
-document.querySelectorAll('.copyButton').forEach(item => {
-  item.addEventListener('click', async event => {
-    if (!navigator.clipboard) {
-      // Clipboard API is not available
-      return;
-    }
-    try {
-      await navigator.clipboard.writeText(event.target.dataset.colorCode);
-    } catch (err) {
-      console.error('Failed to copy!', err);
-    }
-  });
-});
